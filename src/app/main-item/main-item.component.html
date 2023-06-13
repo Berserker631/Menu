@@ -1,0 +1,18 @@
+<div class="sub-columns">
+  <p class="title">{{displayName}}</p>
+  <div class="content">
+    <span *ngFor=" let item of items">
+      <span *ngIf="item.children && item.children.length > 0">
+        <app-main-button [imgRoute]="item.iconName" [class.selected]="item === selectedItem" (click)="onClicked(item)"
+          [text]="item.displayName"></app-main-button>
+      </span>
+      <span *ngIf="!item.children || item.children.length === 0">
+        <app-main-button [text]="item.displayName" [imgRoute]="item.iconName"></app-main-button>
+      </span>
+    </span>
+  </div>
+</div>
+
+<span *ngIf="selectedItem">
+  <app-main-item [items]="selectedItem.children" [displayName]="subItemTitle" [first]="false"></app-main-item>
+</span>

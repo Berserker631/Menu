@@ -1,0 +1,16 @@
+
+@media screen and (max-width: 712px) {
+  .sidenav span span button {
+    font-size: small;
+  }
+
+  .container .sidenav {
+    transition: ease-in-out all .5s;
+    width: 30%;
+  }
+
+  .container .content {
+    transition: ease-in-out all .5s;
+    width: 70%;
+  }
+}

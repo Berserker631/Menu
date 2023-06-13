@@ -1,0 +1,158 @@
+/*#region Header*/
+.Menu {
+  display: none;
+  border: solid 1px #606060;
+  border-radius: 5px;
+  background-color: rgba($color: #000000, $alpha: 0);
+  width: 30px;
+  height: 30px;
+  position: relative;
+  transition: transform 0.5s, width 0.5s;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  position: sticky;
+  z-index: 1;
+  background-color: #363636;
+  align-items: center;
+}
+
+.Menu .line-1 {
+  transition: transform .5s, width .5s;
+  transform: translate(-50%, -7px);
+
+  &.active {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.Menu .line-2 {
+  opacity: 100%;
+
+  &.active {
+    transition: transform 1, width .5s;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+}
+
+.Menu .line-3 {
+  transition: transform .5s, width .5s;
+  transform: translate(-50%, 5px);
+
+  &.active {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+.Menu:hover {
+  transition: all ease-in;
+  background-color: #4d4d4d;
+}
+
+
+.Menu span {
+  background-color: rgb(196, 196, 196);
+  width: 70%;
+  height: 2px;
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all ease-in-out .5s;
+}
+
+/*#endregion Header*/
+
+/*#region content*/
+.container {
+  display: flex;
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+  transform: translateY(-100%);
+  transition: all ease-in 0.5s;
+  overflow-y: scroll;
+  flex-direction: row;
+
+  .background {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/Untitled-1.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &.active {
+    transform: translateY(0);
+    transition: all ease-in 0.3s;
+  }
+
+  .sidenav {
+    transition: ease-in-out all .5s;
+    z-index: 0;
+    padding: 0;
+    height: 100%;
+    width: 15%;
+    background-color: rgba($color: #000000, $alpha: 0);
+    overflow: auto;
+    box-shadow: 6px 5px 5px rgba($color: #151515, $alpha: 0.3);
+
+    span span button {
+      height: 40px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      background-color: rgba($color: #000000, $alpha: 0)
+    }
+
+    span span button:hover {
+      transition: all ease-in 0.1s;
+      background-color: #464646;
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    transition: ease-in-out all .5s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-x: scroll;
+    margin: 0;
+    padding: 0;
+    background-color: rgba($color: #000000, $alpha: 0);
+    white-space: nowrap;
+  }
+}
+
+.time {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  // display: block;
+  color: #fff;
+  font-size: 35px;
+  margin: 0;
+}
+
+/*#endregion content*/
+
+
+/*#region ContainerMovil*/
+.containerMovil.active {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/*#endregion ContainerMovil*/

@@ -1,0 +1,18 @@
+<div class="header" id="header">
+  <div class="Menu" (click)="toggleMenu()">
+    <span class="line-1" [class.active]="activeMenu"></span>
+    <span class="line-2" [class.active]="activeMenu"></span>
+    <span class="line-3" [class.active]="activeMenu"></span>
+  </div>
+  <label style="font-size: 20px; padding-left: 10px;">Hickory Industries</label>
+</div>
+
+<div class="container" [class.active]="activeMenu" *ngIf="showButton">
+  <app-main-item [items]="navItems"></app-main-item>
+</div>
+
+<div class="containerMovil" [class.active]="activeMenu" *ngIf="!showButton">
+  <app-main-mobile [items]="navItems"></app-main-mobile>
+</div>
+
+<span class="time" id="time" *ngIf="showButton"></span>

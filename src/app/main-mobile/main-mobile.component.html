@@ -1,0 +1,20 @@
+<p class="title"><i class="fa-solid fa-arrow-left"></i> {{displayName}}</p>
+<div class="container">
+  <div class="content">
+    <span *ngFor="let item of items" class="item">
+      <span *ngIf="item.children && item.children.length > 0" class="subItems">
+        <app-main-button [imgRoute]="item.iconName" [class.selected]="item === selectedItem" [text]="item.displayName"
+          (click)="onClicked(item)"></app-main-button>
+      </span>
+      <span *ngIf="!item.children || item.children.length === 0" class="subItems">
+        <app-main-button [text]="item.displayName" [imgRoute]="item.iconName"></app-main-button>
+      </span>
+    </span>
+  </div>
+</div>
+
+<div [class.active]="showMenu">
+  <span *ngIf="selectedItem">
+    <app-main-mobile [items]="selectedItem.children" [displayName]="subItemTitle" [first]="false"></app-main-mobile>
+  </span>
+</div>

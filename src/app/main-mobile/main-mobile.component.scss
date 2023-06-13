@@ -1,0 +1,241 @@
+.container,
+.content {
+  min-width: 375px;
+}
+
+/*Devicements redimensions*/
+/*iPad landscape width: 1024px*/
+@media only screen and (max-width: 1024px) {
+  .container {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #282828;
+    margin-top: 45px;
+    overflow: auto;
+    padding-bottom: 50px;
+
+    .content {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-auto-rows: minmax(auto, 1fr);
+      gap: 10px;
+    }
+  }
+
+  .items {
+    width: 100%;
+  }
+
+  .subItems {
+    display: flex;
+    justify-content: center;
+    vertical-align: top;
+    width: 100%;
+  }
+}
+
+/*iPad portrait width: 768px*/
+@media only screen and (max-width: 768px) {
+  .container {
+    display: block;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #282828;
+    margin-top: 45px;
+    overflow: auto;
+    padding-bottom: 50px;
+
+    .content {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(auto, 1fr);
+      gap: 10px;
+    }
+  }
+
+  .items {
+    width: 100%;
+  }
+
+  .subItems {
+    display: flex;
+    justify-content: center;
+    vertical-align: top;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/*iPhone 6-8 Plump landscape width: 736px*/
+@media only screen and (max-width: 736px) {
+  .container {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #282828;
+    margin-top: 45px;
+    overflow: auto;
+    padding-bottom: 50px;
+    margin-left: 0;
+
+    .content {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-auto-rows: minmax(auto, 1fr);
+      gap: 10px;
+    }
+  }
+
+  .items {
+    width: 100%;
+  }
+
+  .subItems {
+    display: flex;
+    justify-content: center;
+    vertical-align: top;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/*Android (Pixel 2) landscape · width: 684px*/
+@media only screen and (max-width: 684px) {
+  .container {
+    display: inline;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #282828;
+    margin-top: 45px;
+    overflow: auto;
+    padding-bottom: 50px;
+    margin-left: 0;
+
+    .content {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-auto-rows: minmax(auto, 1fr);
+    }
+  }
+
+  .items {
+    width: 100%;
+  }
+
+  .subItems {
+    display: flex;
+    justify-content: center;
+    vertical-align: top;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/*Android (Pixel 2) portrait · width: 412px*/
+@media only screen and (max-width: 412px) {
+  .container {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #282828;
+    margin-top: 45px;
+    overflow: auto;
+    padding-bottom: 50px;
+    margin-left: 0;
+
+    .content {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(auto, 1fr);
+    }
+  }
+
+  .items {
+    width: 100%;
+  }
+
+  .subItems {
+    display: flex;
+    justify-content: center;
+    vertical-align: top;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/*iPhone eXpensive portrait width: 375px*/
+@media only screen and (max-width: 375px) {
+  .container {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #282828;
+    margin-top: 45px;
+    overflow: auto;
+    padding-bottom: 50px;
+    margin-left: 0;
+
+    .content {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(auto, 1fr);
+    }
+  }
+
+  .items {
+    width: 100%;
+  }
+
+  .subItems {
+    display: flex;
+    justify-content: center;
+    vertical-align: top;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/*Header*/
+.title {
+  position: absolute;
+  font-size: x-large;
+  top: 0;
+  left: 0;
+  margin: 0;
+  font-size: 25px;
+  background-color: #272727;
+  width: 100%;
+  height: 45px;
+  padding-left: 15px;
+  padding-top: 5px;
+
+  i:hover {
+    cursor: pointer;
+  }
+}

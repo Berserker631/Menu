@@ -1,0 +1,183 @@
+.childButton {
+  height: 70px;
+  width: 70px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #d8d8d8;
+  background-color: rgba($color: #000000, $alpha: 0);
+  transition: all ease-in-out .5s;
+
+  .img {
+    background-size: cover;
+    width: 60%;
+    background-color: #315E9C;
+    padding: 2px;
+    transition: all ease-in-out .5s;
+  }
+}
+
+.childButton:hover {
+  cursor: pointer;
+}
+
+.title {
+  font-size: small;
+}
+
+/*Devicements redimensions*/
+
+@media only screen and (min-width: 1025px) {
+
+  :host {
+    min-width: 215px;
+    height: 70px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #555555;
+      border-radius: 5px;
+    }
+  }
+
+  .childButton {
+    border-radius: 15px;
+    border: none;
+    color: #b4b4b4;
+    height: 70px;
+    min-width: 50px;
+    // padding: 15px;
+    background-color: rgba($color: #000000, $alpha: 0);
+    // margin-bottom: 15px;
+    float: left;
+
+    .img {
+      display: inline-block;
+      background-size: cover;
+      height: 60px;
+      width: 50px;
+      background-color: #315E9C;
+      padding: 2px;
+      transition: all ease-in-out .5s;
+      margin-right: 10px;
+    }
+
+    // .childButton:hover {
+    //   cursor: pointer;
+    // }
+  }
+
+  .buttonText {
+    float: right;
+    margin: 0;
+    word-wrap: break-word;
+    height: 70px;
+    width: 150px;
+    line-height: 70px;
+    font-size: medium;
+    overflow: hidden;
+  }
+
+}
+
+/*iPad landscape width: 1024px*/
+@media only screen and (max-width: 1024px) {
+  .childButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    width: 70px;
+    height: 70px;
+    vertical-align: top;
+    background-color: #315E9C;
+    transition: all ease-in-out .5s;
+  }
+
+  .buttonText {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0;
+    word-break: break-all;
+    max-width: 70px;
+  }
+}
+
+/*iPhone 6-8 Plump landscape width: 736px*/
+@media only screen and (max-width: 736px) {
+  .childButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 50px;
+    height: 50px;
+    vertical-align: top;
+    background-color: #315E9C;
+    transition: all ease-in-out .5s;
+  }
+
+  .buttonText {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0;
+    word-break: break-all;
+    font-size: smaller;
+    max-width: 50px;
+  }
+}
+
+/*iPhone 6-8 Plump portrait width: 412px*/
+@media only screen and (max-width: 412px) {
+  .childButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 50px;
+    height: 50px;
+    vertical-align: top;
+    background-color: #315E9C;
+    transition: all ease-in-out .5s;
+  }
+
+  .buttonText {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0;
+    word-break: break-all;
+    font-size: smaller;
+    max-width: 50px;
+  }
+}
+
+
+/*iPhone 6-8 portrait  width: 375px*/
+@media only screen and (max-width: 375px) {
+  .childButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 50px;
+    height: 50px;
+    vertical-align: top;
+    background-color: #315E9C;
+    transition: all ease-in-out .5s;
+  }
+
+  .buttonText {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0;
+    word-break: break-all;
+    font-size: smaller;
+    white-space: pre-line;
+
+  }
+}
