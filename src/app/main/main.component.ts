@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { format } from 'date-fns';
 import { es } from 'date-fns/locale';
 import { NavItem } from '../nav-item';
@@ -10,9 +10,16 @@ import { NavItem } from '../nav-item';
 })
 export class MainComponent {
   activeMenu = false;
-  showButton = false;
+  showButton = true;
+  isMobile: boolean = false;
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.isMobile = window.innerWidth >= 1024;
+  }
 
   ngOnInit() {
+    this.isMobile = window.innerWidth >= 1024;
     const header = document.getElementById('header')
     const time = document.getElementById('time');
     const date: Date = new Date();

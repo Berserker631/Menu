@@ -7,11 +7,10 @@
   <label style="font-size: 20px; padding-left: 10px;">Hickory Industries</label>
 </div>
 
-<div class="container" [class.active]="activeMenu" *ngIf="showButton">
+<div class="container" [class.active]="activeMenu" *ngIf="isMobile">
   <app-main-item [items]="navItems"></app-main-item>
 </div>
-
-<div class="containerMovil" [class.active]="activeMenu" *ngIf="!showButton">
+<div class="containerMovil" [class.active]="activeMenu" *ngIf="!isMobile">
   <app-main-mobile [items]="navItems"></app-main-mobile>
 </div>
 
